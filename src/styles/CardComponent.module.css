@@ -1,0 +1,85 @@
+
+.container{
+    width: 304px;
+    height: 568px;
+    background-color: #FFFFFF;
+    border: 2px solid red;
+    border-radius: 8px;
+  }
+  
+  .imgProduto{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    left: 32px;
+    top: 32px;
+    background: url(../assets/monitor.png);
+  }
+
+  .imgProduto img{
+    position: absolute;
+    right: 0;
+  }
+  .imgProduto img:nth-child(2){
+    position: absolute;
+    right: 11px;
+    top: 14px
+  }
+
+
+
+  
+  .description{
+    margin: 304px 32px 0 32px;
+    color: var(--grayscale900);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500px;
+  
+  }
+  
+  .oldPrice{
+    margin: 24px 32px 0 32px;
+    color: var(--grayscale600);
+    text-decoration-line: line-through;
+    line-height: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500px;
+  }
+  
+  .price{
+    margin: 4px 32px 0 32px;
+    color: var(--red500);
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600px;
+  }
+  
+  .installments{
+    margin: 0 32px 0 32px;
+    
+    display: inline;
+    width: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--grayscale700) 0%, var(--grayscale700) 20%, var(--grayscale900) 20%, var(--grayscale900) 72%, var(--grayscale700) 72%, var(--grayscale700) 100%);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500px;
+  }
+  
+  .btnAdicionar{
+    width: 240px;
+    height: 48px;
+    background-color: var(--green400);
+    border: none;
+    border-radius: 5px;
+    margin: 32px 32px 0 32px;
+    Padding: 2px, 24px, 12px, 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFFFFF;
+  }
+  .btnAdicionar:hover{
+    background-color: #1C6C3E;
+  }
