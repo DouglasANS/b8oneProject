@@ -9,9 +9,20 @@ button{
 
 :root{
   --red500: #DA4B4F;
+  --green100:#A3F9B9;
   --green400: #40B25C;
   --grayscale600: #B5B5B6 ;
   --grayscale700: #848587;
   --grayscale900: #1C1C1C;
 }
+
+.App{
+  background-color: rgb(211, 211, 211);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
 

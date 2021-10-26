@@ -1,41 +1,61 @@
 import React, { useState } from 'react'
 import styles from '../styles/CardComponent.module.css';
 
-export default function CardComponent() {
+export default function CardComponent(props) {
+
+        const [favorite, setFavorite] = useState(false)
+        const [adicionar, setAdicionar] = useState(false)
        
 
-    
-        var description = "Monitor LED 27'' Gamer Curvo Samsung 1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50"
-        var oldPrice = "R$ 2.813,99"
-        var price = "R$ 2.599,00"
-        var installments = "em até 10x de R$ 259,90 sem juros"
 
         function addProduct(){
+            if(adicionar === true){
+                setAdicionar(false)
+                
+            }else{
+                setAdicionar(true)
+                console.log('prodito com id: ', props.id_Product ,'adicionado')
+            }
+            
         }
 
         function addFavorite(){
-            var checkbox = document.getElementById(styles.favCheckbox)
-            checkbox.checked = true
+            if(favorite === true){
+                setFavorite(false)
+            }else{
+                setFavorite(true)
+            }
+            
+            
         }
     
 
     return (
         <div className={styles.container}>
-            <input type="checkbox" id={styles.favCheckbox}/>
             <div className={styles.imgProduto} >
-                
-                <div onClick={addFavorite} className={styles.a}></div>
-                <div onClick={addFavorite} className={styles.b}></div>
-                
-                
+                <img src="./monitor.png" alt="MonitorCRG50"/>   
+
+                {favorite ?
+                <>
+                    <button onClick={addFavorite} className={styles.btn_Favorite_Wishlist}><div></div></button>
+                </>
+                : 
+                <>
+                    <button onClick={addFavorite} className={styles.btn_Favorite_Default}><div></div></button>
+                </>
+                } 
+ 
             </div>
-            <h2 className={styles.description}>{description}</h2>
-            <h2 className={styles.oldPrice}>{oldPrice}</h2>
-            <h2 className={styles.price}>{price}</h2>
-            <h2 className={styles.installments}>{installments}</h2>
-            <button className={styles.btnAdicionar} onClick={addProduct} >adicionar</button>
             
-            
+            <h2 className={styles.description}>{props.description}</h2>
+            <h2 className={styles.oldPrice}>{props.oldPrice}</h2>
+            <h2 className={styles.price}>{props.price}</h2>
+            <h2 className={styles.installments}>{props.installments}</h2>
+            {adicionar ? 
+            <button className={styles.btnAdicionado} onClick={addProduct}><div></div>adicionado</button>
+            :
+            <button className={styles.btnAdicionar} onClick={addProduct}>adicionar</button> 
+            }
             
         </div>
     )
