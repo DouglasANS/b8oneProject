@@ -3,6 +3,10 @@ body{
   margin: 0;
 }
 
+button{
+  cursor: pointer;
+}
+
 :root{
   --red500: #DA4B4F;
   --green400: #40B25C;

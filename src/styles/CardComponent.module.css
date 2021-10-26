@@ -19,12 +19,87 @@
   .imgProduto img{
     position: absolute;
     right: 0;
+    cursor: pointer;
   }
+
+
   .imgProduto img:nth-child(2){
     position: absolute;
-    right: 11px;
+    animation: add-favorites 1s;
     top: 14px
+    
   }
+
+  .imgProduto div:nth-child(1){
+    position: absolute;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    animation: add-favorites 0.7s;
+    background-image: url('../assets/Ellipse1.png');
+  }
+
+  .imgProduto div:nth-child(2){
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    width: 48px;
+    height: 48px;
+    
+    background-image: url('../assets/Vector1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: add-favorites-heart 0.7s;
+  }
+
+  /*Tem css para apagar analise*/
+
+  @keyframes add-favorites {
+    0% {
+      background-image: url('../assets/Ellipse1.png');
+    }
+
+    25%{
+      background-image: url('../assets/Ellipse2.png');
+    }
+
+    75%{
+      background-image: url('../assets/Ellipse3.png');
+    }
+
+    100% {
+      background-image: url('../assets/Ellipse4.png');
+    }
+  }
+
+  @keyframes add-favorites-heart {
+    0% {
+      background-image: url('../assets/Vector1.png');
+    }
+
+    25%{
+      background-image: url('../assets/Vector2.png');
+    }
+
+    75%{
+      background-image: url('../assets/Vector3.png');
+    }
+
+    100% {
+      background-image: url('../assets/Vector4.png');
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
 
 
 
@@ -77,9 +152,14 @@
     border-radius: 5px;
     margin: 32px 32px 0 32px;
     Padding: 2px, 24px, 12px, 24px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500px;
+    text-transform: uppercase;
+    font-weight: bold;
     color: #FFFFFF;
   }
   .btnAdicionar:hover{
     background-color: #1C6C3E;
   }
+
