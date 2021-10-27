@@ -1,6 +1,6 @@
 
 .container{
-  margin-top: 20px;
+  margin: 20px;
   width: 304px;
   height: 568px;
   background-color: #FFFFFF;
@@ -92,6 +92,7 @@
 
 
 
+
 .description{
   color: var(--grayscale900);
   margin: 24px 32px 0 32px;
@@ -160,12 +161,16 @@
   border-radius: 5px;
   margin: 32px 32px 0 32px;
   Padding: 2px, 24px, 12px, 24px;
+}
+
+.btnAdicionado h1{
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 500px;
   text-transform: uppercase;
   font-weight: bold;
   color: var(--grayscale900);
+  margin-left: 20px;
 }
 
 .btnAdicionado div{

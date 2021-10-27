@@ -11,14 +11,16 @@ button{
   --red500: #DA4B4F;
   --green100:#A3F9B9;
   --green400: #40B25C;
+  --grayscale0:#FFFFFF;
   --grayscale600: #B5B5B6 ;
   --grayscale700: #848587;
   --grayscale900: #1C1C1C;
+  --red600:#C22539;
 }
 
 .App{
   background-color: rgb(211, 211, 211);
-  height: 100vh;
+  height: 100%;
 }
 
 .card_product{
@@ -26,6 +28,7 @@ button{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 

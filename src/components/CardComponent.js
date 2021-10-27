@@ -43,7 +43,7 @@ export default function CardComponent(props) {
     return (
         <div className={styles.container}>
             <div className={styles.imgProduto} >
-                <img src="./monitor.png" alt="MonitorCRG50"/>   
+                <img src={props.imgProduct} alt="MonitorCRG50"/>   
 
                 {favorite ?
                 <>
@@ -56,18 +56,20 @@ export default function CardComponent(props) {
                 } 
  
             </div>
-            
-            <h2 className={styles.description}>{props.description}</h2>
-            <h2 className={styles.oldPrice}>{props.oldPrice}</h2>
-            <h2 className={styles.price}>{props.price}</h2>
-            <h2 className={styles.installments}>{props.installments}</h2>
-            {adicionar ? 
-            <button className={styles.btnAdicionado} onClick={addProduct}><div></div>adicionado</button>
-            :
-            <button className={styles.btnAdicionar} onClick={addProduct}><label id={props.id_Product}>adicionar</label></button> 
-            }
 
-            <h1>{props.id_Product}</h1>
+            <div className={styles.infoProduct} >
+                <h2 className={styles.description}>{props.description}</h2>
+                <h2 className={styles.oldPrice}>{props.oldPrice}</h2>
+                <h2 className={styles.price}>{props.price}</h2>
+                <h2 className={styles.installments}>{props.installments}</h2>
+            </div>
+            
+            
+            {adicionar ? 
+            <button className={styles.btnAdicionado} onClick={addProduct}><div></div><h1>adicionado</h1></button>
+            :
+            <button className={styles.btnAdicionar} onClick={addProduct}><label id={props.id_Product}></label>adicionar</button> 
+            }
             
         </div>
     )

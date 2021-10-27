@@ -1,34 +1,20 @@
-import { useEffect } from 'react';
+import { useContext } from 'react';
 import './App.css';
 import CardComponent from './components/CardComponent';
 import MenuComponent from './components/MenuComponent';
+import ShoppingCartPopupComponent from './components/ShoppingCartPopupComponent';
+import WishListPopupComponent from './components/WishListPopupComponent';
+import { DataContext } from './context/DataContext';
+
 
 function App() {
 
+  const {wishListPopup, shoppingCartPopup, data } = useContext(DataContext)
 
-  const data = {
-     "produtos": [
-       {
-        "id_Product": "1",
-        "description": "Monitor LED 27'' Gamer Curvo Samsung 1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
-        "oldPrice": "R$ 2.813,99",
-        "price": "R$ 2.599,00",
-        "installments": "em até 10x de R$ 259,90 sem juros",
-       },
-       {
-        "id_Product": "2",
-        "description": "Monitor LED 25'' Gamer Curvo Samsung 1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
-        "oldPrice": "R$ 2.523,99",
-        "price": "R$ 1.399,00",
-        "installments": "em até 10x de R$ 159,90 sem juros",
-       }
-     ]
-  }
   
   console.log(data.produtos[0])
 
-  
-
+  //if(val.id_Product === "1"){} render new card list
   return (
     <div className="App">
       <MenuComponent />
@@ -39,6 +25,7 @@ function App() {
           <div key={val.id_Product}>
               <CardComponent 
                 id_Product={val.id_Product}
+                imgProduct={val.imgProduct}
                 description={val.description}
                 oldPrice={val.oldPrice}
                 price={val.price}
@@ -49,6 +36,16 @@ function App() {
       })}
 
       </div>
+
+      {wishListPopup && (
+        <WishListPopupComponent />
+      )}
+
+      {shoppingCartPopup && (
+        <ShoppingCartPopupComponent />
+      )}
+
+      
       
       
     </div>
