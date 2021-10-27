@@ -11,15 +11,19 @@ button{
   --red500: #DA4B4F;
   --green100:#A3F9B9;
   --green400: #40B25C;
+  --green600: #1C6C3E;
   --grayscale0:#FFFFFF;
   --grayscale600: #B5B5B6 ;
   --grayscale700: #848587;
   --grayscale900: #1C1C1C;
   --red600:#C22539;
+  --grayscale950-08:#00000008;
+
+  --black:rgba(0, 0, 0, 0.500);
 }
 
 .App{
-  background-color: rgb(211, 211, 211);
+  background-color: #E5E5E5;
   height: 100%;
 }
 

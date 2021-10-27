@@ -3,9 +3,8 @@
     flex-direction: column;
     justify-content: center;
     width: 80%;
-    margin-top: 10px;
-    margin-left: 10%;
-    border: solid 1px gray;
+    margin: 10px 10% 30px;
+    border: solid 1px var(--grayscale700);
 }
 
 .description{
