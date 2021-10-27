@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import './App.css';
 import CardComponent from './components/CardComponent';
+import MenuComponent from './components/MenuComponent';
 
 function App() {
 
@@ -7,14 +9,14 @@ function App() {
   const data = {
      "produtos": [
        {
-        "id_Product": 1,
+        "id_Product": "1",
         "description": "Monitor LED 27'' Gamer Curvo Samsung 1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
         "oldPrice": "R$ 2.813,99",
         "price": "R$ 2.599,00",
         "installments": "em até 10x de R$ 259,90 sem juros",
        },
        {
-        "id_Product": 2,
+        "id_Product": "2",
         "description": "Monitor LED 25'' Gamer Curvo Samsung 1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
         "oldPrice": "R$ 2.523,99",
         "price": "R$ 1.399,00",
@@ -25,9 +27,13 @@ function App() {
   
   console.log(data.produtos[0])
 
+  
 
   return (
     <div className="App">
+      <MenuComponent />
+
+      <div className="card_product">
       { data.produtos.map((val)=>{
         return(
           <div key={val.id_Product}>
@@ -40,9 +46,10 @@ function App() {
               />
           </div>
         )
-      })
-        
-      }
+      })}
+
+      </div>
+      
       
     </div>
   );

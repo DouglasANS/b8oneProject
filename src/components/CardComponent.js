@@ -1,35 +1,45 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from '../styles/CardComponent.module.css';
+import { DataContext } from '../context/DataContext';
 
 export default function CardComponent(props) {
 
         const [favorite, setFavorite] = useState(false)
         const [adicionar, setAdicionar] = useState(false)
-       
+        const {wishList, setWishList, shoppingCart, setShoppingCart} = useContext(DataContext)
+        
+        var asd = ["asd", "bbb"]
 
+        function filterByProductId(value) {
+            return value !== props.id_Product.toString();
+        }
 
         function addProduct(){
             if(adicionar === true){
-                setAdicionar(false)
-                
+                var newshoppingCart = shoppingCart.filter(filterByProductId)
+                setShoppingCart(newshoppingCart)
+                setAdicionar(false)               
             }else{
+                setShoppingCart([...shoppingCart, props.id_Product.toString()] )
                 setAdicionar(true)
-                console.log('prodito com id: ', props.id_Product ,'adicionado')
             }
             
         }
 
         function addFavorite(){
             if(favorite === true){
+                var newWishList = wishList.filter(filterByProductId)
+                setWishList(newWishList)
                 setFavorite(false)
+                
             }else{
+                setWishList([...wishList, props.id_Product.toString()] )
                 setFavorite(true)
+  
             }
             
             
         }
-    
-
     return (
         <div className={styles.container}>
             <div className={styles.imgProduto} >
@@ -54,8 +64,10 @@ export default function CardComponent(props) {
             {adicionar ? 
             <button className={styles.btnAdicionado} onClick={addProduct}><div></div>adicionado</button>
             :
-            <button className={styles.btnAdicionar} onClick={addProduct}>adicionar</button> 
+            <button className={styles.btnAdicionar} onClick={addProduct}><label id={props.id_Product}>adicionar</label></button> 
             }
+
+            <h1>{props.id_Product}</h1>
             
         </div>
     )
