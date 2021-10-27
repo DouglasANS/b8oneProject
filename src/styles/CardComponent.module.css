@@ -93,22 +93,25 @@
 }
 
 .description{
-  margin: 0 0 24px 0;
+  height: 60px;
+  margin: 0;
   color: var(--grayscale900);
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  font-weight: 500px;
+  font-weight: 500;
+  line-height: 20px;
 
 }
 
 .oldPrice{
-  margin: 0 0 4px 0;
+  margin: 24px 0 0 0;
   color: var(--grayscale600);
   text-decoration-line: line-through;
   line-height: 20px;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  font-weight: 500px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .price{
@@ -116,19 +119,23 @@
   color: var(--red500);
   font-family: 'Inter', sans-serif;
   font-size: 24px;
-  font-weight: 600px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 24px;
 }
 
 .installments{ 
-  margin: 0; 
+  margin: 0 0 4px 0; 
   display: inline;
   width: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, var(--grayscale700) 0%, var(--grayscale700) 20%, var(--grayscale900) 20%, var(--grayscale900) 72%, var(--grayscale700) 72%, var(--grayscale700) 100%);
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--grayscale700) 0%, var(--grayscale700) 20%, var(--grayscale900) 20%, var(--grayscale900) 71%, var(--grayscale700) 71%, var(--grayscale700) 100%);
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  font-weight: 500px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.005em;
 }
 
 .btnAdicionar{

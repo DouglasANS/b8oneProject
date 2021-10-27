@@ -6,7 +6,7 @@ export default function CardPopupComponent(props) {
         <div>
             {   
                 props.data.produtos.map((val)=>{ 
-                    if(props.wishList.includes(val.id_Product)){
+                    if(props.typePopup.includes(val.id_Product)){
                         return(
                             <div className={styles.container}>
                                 <img className={styles.imgCardPopup} src={val.imgProduct} alt="Imagem Produto" />
@@ -26,8 +26,6 @@ export default function CardPopupComponent(props) {
                     }
                 })
             }
-            
-            
         </div>
     )
 }

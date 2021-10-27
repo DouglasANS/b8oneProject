@@ -21,7 +21,7 @@ export default function WishListPopupComponent() {
                 
                 <CardPopupComponent 
                 data={data} 
-                wishList={wishList}
+                typePopup={wishList}
                 />
             </div>
         </div>

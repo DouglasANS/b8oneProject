@@ -30,6 +30,7 @@
 }
 
 .cancelButton {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -37,6 +38,7 @@
 }
 
 .leaveButton{
+    position: fixed;
     width: 40px;
     height: 40px;
     background: none;

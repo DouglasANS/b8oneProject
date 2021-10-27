@@ -9,6 +9,8 @@
 .popupButtonWishList, .popupButtonShoppingCart{
     margin: 16px 20px;
     text-align: center;
+    font-size: 14px;
+    font-weight: bold;
     width: 200px;
     height: 48px;
     border: none;

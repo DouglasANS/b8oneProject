@@ -21,8 +21,8 @@ export default function MenuComponent() {
 
     return (
         <div className={styles.container}>
-            <button className={styles.popupButtonWishList}  onClick={showWishList}>{wishList.length}  Lista de Desejos</button>
-            <button className={styles.popupButtonShoppingCart} onClick={showShoppingCart}>{shoppingCart.length}  Carrinho de compras</button>
+            <button className={styles.popupButtonWishList}  onClick={showWishList}>{wishList.length} - Lista de Desejos</button>
+            <button className={styles.popupButtonShoppingCart} onClick={showShoppingCart}>{shoppingCart.length} - Carrinho de compras</button>
         </div>
     )
 }
