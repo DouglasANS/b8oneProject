@@ -54,9 +54,28 @@ export default function DataProvider({ children }) {
        "oldPrice": "R$ 2.499,00",
        "price": "R$ 2.199,00",
        "installments": "em até 10x de R$ 249,90 sem juros",
+      },
+      {
+       "id_Product": "7",
+       "imgProduct":  " https://m.media-amazon.com/images/I/811-0kItnvL._AC_SX679_.jpg",
+       "description": "SteelSeries Teclado mecânico compacto para jogos Apex 7 TKL – tela inteligente OLED",
+       "oldPrice": "R$ 933,16",
+       "price": "R$ 899,16",
+       "installments": "em até 10x de R$ 93,37 sem juros",
+      }
+      ,
+      {
+       "id_Product": "8",
+       "imgProduct":  "https://m.media-amazon.com/images/I/51jHZfqCoEL._AC_SX522_.jpg",
+       "description": "Suporte Articulado de Mesa com Pistão a Gás e Ajuste de Altura para 2 Monitores de 17” a 27” - F160N",
+       "oldPrice": "R$ 449,00",
+       "price": "R$ 349,00",
+       "installments": "em até 10x de R$ 44,90 sem juros",
       }
     ]
  }
+
+
 
   const [wishList, setWishList] = useState([])
   const [shoppingCart, setShoppingCart] = useState([])

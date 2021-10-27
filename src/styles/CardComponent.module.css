@@ -90,12 +90,16 @@
 /*Tem css para apagar analise*/
 /*refatorar o codigo*/
 
-
+.infoProduct{
+  height: 152px;
+  width: 240px;
+  margin: 32px;
+}
 
 
 .description{
+  margin: 0 0 24px 0;
   color: var(--grayscale900);
-  margin: 24px 32px 0 32px;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500px;
@@ -103,7 +107,7 @@
 }
 
 .oldPrice{
-  margin: 24px 32px 0 32px;
+  margin: 0 0 4px 0;
   color: var(--grayscale600);
   text-decoration-line: line-through;
   line-height: 20px;
@@ -113,16 +117,15 @@
 }
 
 .price{
-  margin: 4px 32px 0 32px;
+  margin: 0 0 4px 0;
   color: var(--red500);
   font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 600px;
 }
 
-.installments{
-  margin: 0 32px 0 32px;
-  
+.installments{ 
+  margin: 0; 
   display: inline;
   width: 100%;
   -webkit-background-clip: text;
@@ -139,7 +142,7 @@
   background-color: var(--green400);
   border: none;
   border-radius: 5px;
-  margin: 32px 32px 0 32px;
+  margin: 0px 32px 0 32px;
   Padding: 2px, 24px, 12px, 24px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
