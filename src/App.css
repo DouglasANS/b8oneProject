@@ -9,17 +9,17 @@ button{
 
 :root{
   --red500: #DA4B4F;
+  --red600:#C22539;
   --green100:#A3F9B9;
   --green400: #40B25C;
+  --green500: #2c8b55;
   --green600: #1C6C3E;
   --grayscale0:#FFFFFF;
   --grayscale600: #B5B5B6 ;
   --grayscale700: #848587;
   --grayscale900: #1C1C1C;
-  --red600:#C22539;
-  --grayscale950-08:#00000008;
-
-  --black:rgba(0, 0, 0, 0.500);
+  --grayscale950:#00000014;
+  --black: #00000050;
 }
 
 .App{
@@ -28,7 +28,6 @@ button{
 }
 
 .card_product{
-  
   display: flex;
   flex-direction: row;
   justify-content: space-around;

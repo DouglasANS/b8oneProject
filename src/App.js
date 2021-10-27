@@ -6,15 +6,10 @@ import ShoppingCartPopupComponent from './components/ShoppingCartPopupComponent'
 import WishListPopupComponent from './components/WishListPopupComponent';
 import { DataContext } from './context/DataContext';
 
-
 function App() {
 
   const {wishListPopup, shoppingCartPopup, data } = useContext(DataContext)
 
-  
-  console.log(data.produtos[0])
-
-  //if(val.id_Product === "1"){} render new card list
   return (
     <div className="App">
       <MenuComponent />
@@ -44,9 +39,6 @@ function App() {
       {shoppingCartPopup && (
         <ShoppingCartPopupComponent />
       )}
-
-      
-      
       
     </div>
   );

@@ -5,8 +5,10 @@ import CardPopupComponent from './CardPopupComponent'
 
 export default function ShoppingCartPopupComponent() {
 
-    const {setShoppingCartPopup, data, shoppingCart} = useContext(DataContext)
-
+    const {
+        setShoppingCartPopup, 
+        data, 
+        shoppingCart} = useContext(DataContext)
 
     function leavePopupShoppingCart(){
         setShoppingCartPopup(false)
@@ -15,12 +17,15 @@ export default function ShoppingCartPopupComponent() {
     return (
         <div className={styles.containerModal}>
             <div className={styles.contentModal}>
-            <div className={styles.cancelButton}>
-                <button className={styles.leaveButton} onClick={leavePopupShoppingCart}> x </button>
+                <div className={styles.cancelButton}>
+                    <button className={styles.leaveButton} onClick={leavePopupShoppingCart}> x </button>
                 </div>
                 <h1 className={styles.title}>Carrinho de compras</h1>
-                
-                <CardPopupComponent data={data} wishList={shoppingCart}/>
+
+                <CardPopupComponent 
+                data={data} 
+                wishList={shoppingCart}
+                />
             </div>
         </div>
     )

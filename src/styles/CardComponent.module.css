@@ -1,15 +1,13 @@
-
 .container{
   margin: 20px;
   width: 304px;
   height: 568px;
   background-color: var(--grayscale0);
   border-radius: 8px;
-  
 }
 
 .container:hover{
-  box-shadow: 0px 8px 24px 0 var(grayscale950-08);
+  box-shadow: 0px 8px 24px 0px var(--grayscale950);
 }
 
 .imgProduto{
@@ -23,7 +21,6 @@
   margin-left: 32px;
   
 }
-
 
 .btn_Favorite_Default{
   width: 48px;
@@ -89,16 +86,11 @@
   background-image: url('../assets/Vector4.png');
 }
 
-
-/*Tem css para apagar analise*/
-/*refatorar o codigo*/
-
 .infoProduct{
   height: 152px;
   width: 240px;
   margin: 32px;
 }
-
 
 .description{
   margin: 0 0 24px 0;

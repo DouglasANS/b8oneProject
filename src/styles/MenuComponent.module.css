@@ -14,7 +14,6 @@
     border: none;
     border-radius: 22px;
     color: var(--grayscale0);
-    
 }
 
 .popupButtonWishList{
@@ -30,6 +29,6 @@
 }
 
 .popupButtonShoppingCart:hover{
-    background-color: var(--green400)
+    background-color: var(--green500)
     
 }

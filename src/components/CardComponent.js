@@ -4,47 +4,41 @@ import { DataContext } from '../context/DataContext';
 
 export default function CardComponent(props) {
 
-        const [favorite, setFavorite] = useState(false)
-        const [adicionar, setAdicionar] = useState(false)
-        const {wishList, setWishList, shoppingCart, setShoppingCart} = useContext(DataContext)
-        
-        var asd = ["asd", "bbb"]
+    const [favorite, setFavorite] = useState(false)
+    const [adicionar, setAdicionar] = useState(false)
+    const {wishList, setWishList, shoppingCart, setShoppingCart} = useContext(DataContext)
 
-        function filterByProductId(value) {
-            return value !== props.id_Product.toString();
-        }
+    function filterByProductId(value) {
+        return value !== props.id_Product.toString();
+    }
 
-        function addProduct(){
-            if(adicionar === true){
-                var newshoppingCart = shoppingCart.filter(filterByProductId)
-                setShoppingCart(newshoppingCart)
-                setAdicionar(false)               
-            }else{
-                setShoppingCart([...shoppingCart, props.id_Product.toString()] )
-                setAdicionar(true)
-            }
-            
+    function addProduct(){
+        if(adicionar === true){
+            var newshoppingCart = shoppingCart.filter(filterByProductId)
+            setShoppingCart(newshoppingCart)
+            setAdicionar(false)               
+        }else{
+            setShoppingCart([...shoppingCart, props.id_Product.toString()] )
+            setAdicionar(true)
         }
+    }
 
-        function addFavorite(){
-            if(favorite === true){
-                var newWishList = wishList.filter(filterByProductId)
-                setWishList(newWishList)
-                setFavorite(false)
-                
-            }else{
-                setWishList([...wishList, props.id_Product.toString()] )
-                setFavorite(true)
-  
-            }
-            
-            
+    function addFavorite(){
+        if(favorite === true){
+            var newWishList = wishList.filter(filterByProductId)
+            setWishList(newWishList)
+            setFavorite(false)
+        }else{
+            setWishList([...wishList, props.id_Product.toString()] )
+            setFavorite(true)
         }
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.imgProduto} >
                 <img src={props.imgProduct} alt="MonitorCRG50"/>   
-
+                
                 {favorite ?
                 <>
                     <button onClick={addFavorite} className={styles.btn_Favorite_Wishlist}><div></div></button>
@@ -64,7 +58,6 @@ export default function CardComponent(props) {
                 <h2 className={styles.installments}>{props.installments}</h2>
             </div>
             
-            
             {adicionar ? 
             <button className={styles.btnAdicionado} onClick={addProduct}><div></div><h1>adicionado</h1></button>
             :
@@ -72,6 +65,5 @@ export default function CardComponent(props) {
             }
             
         </div>
-    )
-    
+    )    
 }

@@ -1,10 +1,9 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 
 export const DataContext = createContext();
 
 export default function DataProvider({ children }) {
 
-  
   const data = {
     "produtos": [
       {
@@ -75,19 +74,11 @@ export default function DataProvider({ children }) {
     ]
  }
 
-
-
   const [wishList, setWishList] = useState([])
   const [shoppingCart, setShoppingCart] = useState([])
 
   const [wishListPopup, setWishListPopup] = useState(false)
   const [shoppingCartPopup, setShoppingCartPopup] = useState(false)
-  
-
-  function showData(){
-    console.log('wishList: ',wishList)
-    console.log('shoppingCart', shoppingCart)
-  }
   
   return (
     <DataContext.Provider
@@ -95,8 +86,7 @@ export default function DataProvider({ children }) {
         wishList, 
         setWishList, 
         shoppingCart, 
-        setShoppingCart, 
-        showData, 
+        setShoppingCart,
         data, 
         shoppingCartPopup,
         wishListPopup,

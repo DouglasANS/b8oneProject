@@ -12,12 +12,10 @@ export default function MenuComponent() {
         } = useContext(DataContext)
 
     function showShoppingCart(){
-        console.log(shoppingCart)
         setShoppingCartPopup(true)
     }
 
     function showWishList(){
-        console.log(wishList)
         setWishListPopup(true)
     }
 
