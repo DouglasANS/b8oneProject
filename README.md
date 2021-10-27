@@ -5,6 +5,10 @@
 <h1 align="center">
 	<img alt="Logo" src="./public/logob8one.png" width="100px" />
 </h1>
+<h1 align="center">
+	<img alt="Logo" src="./public/imgReadmePage.png" width="600px" />
+</h1>
+
 
 Requirements
 - npm
